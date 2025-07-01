@@ -1,7 +1,13 @@
-const Router = require('koa-router')
-const b = require('../api/b')
+/* const Router = require('koa-router')
+const b = require('../api/b') */
+import Router from "koa-router"
+import bController from "../api/BController"
 
 const router = new Router()
-router.get('/b',b)
+router.get('/demo2',bController.demo)
 
-module.exports = router
+/* module.exports = router */
+
+
+
+export default router

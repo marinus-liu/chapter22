@@ -26,13 +26,17 @@ const webpackconfig = {
         rules: [
             {
                 test: /\.(js|jsx)$/,
-                use: {
-                    loader: 'babel-loader',
-                    /* options:{
-                        presets: '@babel/preset-env'
-                    } */
-                },
-                exclude: [path.join(__dirname, '/node_modules')]
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options:{
+                            /* presets: '@babel/preset-env' */
+                            babelrc: true
+                        }
+                    }
+                ],
+                // exclude: [path.join(__dirname, '/node_modules')]
+                exclude: /node_modules/
             }    
             
         ]
