@@ -10,7 +10,7 @@ module.exports = combineRouters(
 ) */
 
 import combineRoutes from 'koa-combine-routers'
-import demoRouter from './demoRouter'
+import publicRouter from './publicRouter'
 import bRouter from './bRouter'
 
-export default combineRoutes(demoRouter,bRouter)
+export default combineRoutes(publicRouter,bRouter)

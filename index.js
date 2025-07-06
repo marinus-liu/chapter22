@@ -40,4 +40,4 @@ if(!isDevMode) {
 app.use(middleware)
 app.use(router())
 
-app.listen(8080)
+app.listen(3000)

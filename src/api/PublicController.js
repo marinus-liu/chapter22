@@ -21,15 +21,22 @@ module.exports ={
         "message":"hello from a test!!"
     }
 } */
+import svgCaptcha from 'svg-captcha'
 
-class DemoController{
+class PublicController{
     constructor () {}
-    async demo(ctx) {
+    async getCaptcha(ctx) {
+        const newCaptcha = svgCaptcha.create({
+        })
+        console.log(newCaptcha)
+
         ctx.body = {
+            code:200,
+            data:newCaptcha.data,
             msg: 'body message   test is success'
         }
     }
     
 }
 
-export default new DemoController();
+export default new PublicController();

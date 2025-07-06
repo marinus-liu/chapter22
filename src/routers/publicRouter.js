@@ -7,10 +7,10 @@ router.get('/a',a)
 module.exports = router */
 
 import Router from "koa-router";
-import demoController from '../api/DemoController'
+import publicController from '../api/PublicController'
 
 const router = new Router()
 
-router.get('/demo', demoController.demo)
+router.get('/demo', publicController.getCaptcha)
 
 export default router
