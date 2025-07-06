@@ -11,6 +11,6 @@ import publicController from '../api/PublicController'
 
 const router = new Router()
 
-router.get('/demo', publicController.getCaptcha)
+router.get('/getCaptcha', publicController.getCaptcha)
 
 export default router
